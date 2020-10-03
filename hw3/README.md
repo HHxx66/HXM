@@ -28,4 +28,4 @@
 
 或者可以新建一个空对象(Position(0,0,0))，将脚本FirstController挂载上去，运行即可。
 
-ps：摄像机(Position(5,3,-36),Rotation(25,0,0))，光源(Rotation(50,0,0))。
+ps：摄像机(Position(5,3,-36)，Rotation(25,0,0))，光源(Rotation(50,0,0))。
