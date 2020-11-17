@@ -10,6 +10,8 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
     {
         public float moveSpeed = 30f;
 
+        private float defaultMoveSpeed = 30f;
+
         public float jumpSpeed = 35f;
         
         public float rotationSpeed = 720f;
@@ -56,6 +58,12 @@ namespace MenteBacata.ScivoloCharacterControllerDemo
 
                 if(horizontalInput!=0||verticalInput!=0){
                     hero.GetComponent<Animator>().SetBool("isRunning",true);
+                    if(horizontalInput!=0&&verticalInput!=0){
+                        moveSpeed = defaultMoveSpeed / Mathf.Sqrt(2);
+                    }
+                    else{
+                        moveSpeed = defaultMoveSpeed;
+                    }
                 }
                 else{
                     hero.GetComponent<Animator>().SetBool("isRunning",false);
