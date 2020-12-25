@@ -70,7 +70,7 @@ public class communicating : MonoBehaviour
                 other.GetComponent<communicating>().callback();
             }
             else{
-                rect.horizontalNormalizedPosition = rect.horizontalNormalizedPosition + Mathf.Pow(2,(t - 3.0f)) * ((t - 3.0f) / 250) * Time.deltaTime;
+                rect.horizontalNormalizedPosition = rect.horizontalNormalizedPosition + Mathf.Pow(2,Mathf.Log((t - 2.0f) * 5)) * ((t - 3.0f) / 200) * Time.deltaTime;
                 dt = dt + Time.deltaTime;
             }
         }
